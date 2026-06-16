@@ -44,6 +44,7 @@ title: VOX VT+ patches
             </div>
         </div>
     </div>
+    <div class="patch-name" id="patch-name"></div>
     <div class="buttons">
         <select id="select-amp">
             <option value="30" selected>VT20+</option>
@@ -67,7 +68,7 @@ title: VOX VT+ patches
             <tbody>
                 {% for amp in site.data.patches %}
                 <tr>
-                    <td>{{ forloop.index | minus: 1 }}</td>
+                    <td class="patch-index" data-index="{{ forloop.index | minus: 1 }}">{{ forloop.index | minus: 1 }}</td>
                     <td>{{ amp.Name }}</td>
                     <td>{{ amp["Music style"] }}</td>
                     <td>{{ amp["Inspired by"] }}</td>

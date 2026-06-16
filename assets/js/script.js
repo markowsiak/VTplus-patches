@@ -15,11 +15,18 @@ $(document).ready(function() {
         } else {
             alert("Wrong patch number!");
         }
-        
+
+    });
+    $("#list").on("click", ".patch-index", function() {
+        var selectedIndex = parseInt($(this).data("index"));
+        settings = arrayJSON[selectedIndex];
+        console.log(settings);
+        applySettings(settings, maxWatts);
     });
 });
 
 function applySettings(settings, maxWatts) {
+    $("#patch-name").text(settings["Name"]);
     $("#knob-amp").css({"transform": "rotate(" + 30 * settings["Amp style"] + "deg)"});
     $("#power").css({"transform": "rotate(" + Math.min(30 + 3 * (settings["PowerLevel"] * settings["AmpPower"] / maxWatts), 330) + "deg)"});
     $("#gain").css({"transform": "rotate(" + (30 + 3 * settings["Gain"]) + "deg)"});

@@ -94,7 +94,7 @@ div {
 .buttons {
     display: block;
     margin: 0 auto;
-    margin-top: 350px;
+    margin-top: 365px;
     text-align: center;
     width: 100%;
     height: 100%;
@@ -102,7 +102,7 @@ div {
 
 .list {
     position: absolute;
-    margin-top: 400px;
+    margin-top: 415px;
     text-align: center;
     width: 100%;
     height: 100%
@@ -112,4 +112,24 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     margin: 0 auto;
+}
+
+.patch-index {
+    cursor: pointer;
+    font-weight: bold;
+    color: #0645ad;
+}
+
+.patch-index:hover {
+    background: #ddd;
+}
+
+.patch-name {
+    display: block;
+    position: absolute;
+    margin-top: 320px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
